@@ -332,7 +332,6 @@ class L10nClEdiUtilMixin(models.AbstractModel):
         headers.update({'Content-Length': '{}'.format(len(multi[0]))})
         try:
             response = pool.request_encode_body('POST', url + post, params, headers)
-            _logger.info(response)
         except Exception as error:
             self._report_connection_err(_('Sending DTE to SII failed due to:') + '<br /> %s' % error)
             digital_signature.last_token = False

@@ -27,7 +27,6 @@ This code allows to generate the DTE document for Chilean invoicing.
     'external_dependencies': {
         'python': [
             'zeep',
-            'pdf417gen',
         ],
     },
     'data': [
